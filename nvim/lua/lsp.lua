@@ -10,7 +10,8 @@ require('mason').setup({
 
 require('mason-lspconfig').setup({
   -- A list of servers to automatically install if they're not already installed
-  ensure_installed = { 'pylsp', 'lua_ls', 'zls' },
+  ensure_installed = { 'lua_ls', 'zls' },
+
 })
 
 -- Set different settings for different languages' LSP
@@ -20,7 +21,6 @@ require('mason-lspconfig').setup({
 --     - on_attach: a lua callback function to run after LSP attaches to a given buffer
 local lspconfig = require("lspconfig")
 
-lspconfig.pylsp.setup({})
 lspconfig.lua_ls.setup({})
 lspconfig.zls.setup({})
 
