@@ -107,7 +107,7 @@ setopt NO_BEEP
 
 # global aliases
 alias la='ls -a'
-alias ls='ls -l'
+alias ll='ls -l'
 alias space='du -hs * | sort -h'
 
 alias ga='git add'
