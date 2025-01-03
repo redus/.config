@@ -70,7 +70,7 @@ zstyle ':omz:update' mode reminder  # just remind me to update when it's time
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git git-commit isodate qrcode)
+plugins=(git git-commit isodate)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -100,6 +100,23 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
+# zsh options
+setopt COMPLETE_IN_WORD
+setopt INC_APPEND_HISTORY
+setopt NO_BEEP
+
+# global aliases
+alias la='ls -a'
+alias ls='ls -l'
+alias space='du -hs * | sort -h'
+
+alias ga='git add'
+alias gc='git commit'
+alias gd='git diff'
+alias gl='git log'
+alias gs='git status'
+
+# work aliases
 AMAZON_CONFIG=~/.config/sh/amazon.sh
 if [[ -f "$AMAZON_CONFIG" ]]; then
 	source "$AMAZON_CONFIG";
